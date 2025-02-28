@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://mfjh0i4wv6kl"]
+
+[ext_resource type="Texture2D" uid="uid://b10k6b1knqd2w" path="res://assets/merlin_.png" id="1_vadmg"]
+[ext_resource type="Texture2D" uid="uid://c3lf7jjksn3s" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="2_13gdr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ja3"]
+atlas = ExtResource("1_vadmg")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dggvv"]
+atlas = ExtResource("1_vadmg")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8myrq"]
+atlas = ExtResource("1_vadmg")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbcpm"]
+atlas = ExtResource("1_vadmg")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbcil"]
+atlas = ExtResource("2_13gdr")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75sac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ja3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dggvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8myrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbcpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbcil")
+}],
+"loop": false,
+"name": &"fade",
+"speed": 10.0
+}]
+
+[node name="fadeout" type="AnimatedSprite2D"]
+visible = false
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_75sac")
+animation = &"fade"
+autoplay = "fade"
